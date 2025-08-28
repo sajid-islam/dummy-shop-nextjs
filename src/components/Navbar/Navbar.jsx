@@ -1,16 +1,17 @@
 import Image from "next/image";
-import { Input } from "../ui/input";
 import Link from "next/link";
 
-import { CiSearch } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
+import { CiMenuBurger } from "react-icons/ci";
+import { PiUserCircleThin } from "react-icons/pi";
+import SearchBar from "../SearchBar/SearchBar";
 
 const Navbar = () => {
   return (
-    <nav className="flex gap-10 justify-between items-center px-5 h-16">
+    <nav className="flex gap-10 justify-between items-center px-2 md:px-5 h-16">
       {/* Logo */}
       <div className="flex items-center">
         <Image src={"/logo.png"} width={50} height={50} alt="logo" />
@@ -18,9 +19,8 @@ const Navbar = () => {
       </div>
 
       {/* Search bar */}
-      <div className="relative flex-1 lg:flex-none lg:w-3/6">
-        <CiSearch size={20} className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer" />
-        <Input placeholder="Search for product" className="rounded-full placeholder:text-sm" />
+      <div className="relative hidden md:block flex-1 lg:flex-none lg:w-3/6">
+        <SearchBar />
       </div>
 
       {/* Actions */}
@@ -48,7 +48,15 @@ const Navbar = () => {
         </Link>
 
         {/* Login button */}
-        <Button className="ml-4">LOGIN</Button>
+        <Link href="sign-in">
+          <Button className="md:ml-4 hidden md:block">LOGIN</Button>
+          <PiUserCircleThin size={25} className="md:hidden" />
+        </Link>
+
+        {/* Navbar toggle */}
+        <button className="md:hidden">
+          <CiMenuBurger size={20} />
+        </button>
       </div>
     </nav>
   );
