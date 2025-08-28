@@ -6,6 +6,7 @@
   --color-primary-400: #ef7848;
   --color-primary-300: #f5a67c;
   --color-muted-600: #4b5563;
+  --color-muted-50: #f4f6f7;
 }
 @custom-variant dark (&:is(.dark *));
 
