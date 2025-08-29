@@ -6,6 +6,7 @@ import PrimaryNavbar from "@/components/PrimaryNavbar/PrimaryNavbar";
 import ReduxProvider from "@/components/ReduxProvider/ReduxProvider";
 import WishlistSidebar from "@/components/WishlistSidebar/WishlistSidebar";
 import CartSidebar from "@/components/CartSidebar/CartSidebar";
+import Footer from "@/components/Footer/Footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
           </header>
         </ReduxProvider>
         {children}
+        <Footer />
         <Toaster position="top-right" />
       </body>
     </html>
