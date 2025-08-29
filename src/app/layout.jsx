@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import PrimaryNavbar from "@/components/PrimaryNavbar/PrimaryNavbar";
 import ReduxProvider from "@/components/ReduxProvider/ReduxProvider";
 import WishlistSidebar from "@/components/WishlistSidebar/WishlistSidebar";
+import CartSidebar from "@/components/CartSidebar/CartSidebar";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
             <Navbar />
             <PrimaryNavbar />
             <WishlistSidebar />
+            <CartSidebar />
           </header>
         </ReduxProvider>
         {children}

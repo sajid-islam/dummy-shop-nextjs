@@ -12,6 +12,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import { useDispatch, useSelector } from "react-redux";
 import { setIsOpen } from "@/redux/navbar/navbarSlice";
 import { setIsWishlistOpen } from "@/redux/wishlist-sidebar/wishlistSlice";
+import { setIsCartOpen } from "@/redux/cart-sidebar/cartSidebarSlice";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -39,19 +40,16 @@ const Navbar = () => {
           <CiHeart size={25} />
           <span className="hidden lg:block">Wishlist</span>
           <Badge className="absolute -left-1 -top-1 h-4 min-w-4 text-[10px] rounded-full px-1 tabular-nums">
-            2
+            3
           </Badge>
         </button>
-        <Link
-          href="#"
+        <button
+          onClick={() => dispatch(setIsCartOpen())}
           className="relative flex gap-1 items-center text-muted-600 hover:text-black transition-colors duration-150"
         >
           <CiShoppingCart size={25} />
           <span className="hidden lg:block">Cart</span>
-          <Badge className="absolute -left-1 -top-1 h-4 min-w-4 text-[10px] rounded-full px-1 tabular-nums">
-            8
-          </Badge>
-        </Link>
+        </button>
 
         {/* Login button */}
         <Link href="sign-in">
