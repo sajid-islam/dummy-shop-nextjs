@@ -13,7 +13,7 @@ import { Pagination, Autoplay, Navigation } from "swiper/modules";
 
 const BannerSlider = () => {
   return (
-    <div className="max-w-[90rem] px-5 mx-auto">
+    <>
       <Swiper
         pagination={true}
         navigation={true}
@@ -30,7 +30,7 @@ const BannerSlider = () => {
           <Image src={sliderImage3} alt="slider image 2" className="rounded-md w-full" />
         </SwiperSlide>
       </Swiper>
-    </div>
+    </>
   );
 };
 
