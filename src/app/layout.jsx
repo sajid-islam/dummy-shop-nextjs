@@ -1,12 +1,6 @@
 import { Poppins } from "next/font/google";
 import { Toaster } from "sonner";
 import "./globals.css";
-import Navbar from "@/components/Navbar/Navbar";
-import PrimaryNavbar from "@/components/PrimaryNavbar/PrimaryNavbar";
-import ReduxProvider from "@/components/ReduxProvider/ReduxProvider";
-import WishlistSidebar from "@/components/WishlistSidebar/WishlistSidebar";
-import CartSidebar from "@/components/CartSidebar/CartSidebar";
-import Footer from "@/components/Footer/Footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -24,16 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
-        <ReduxProvider>
-          <header className="space-y-5">
-            <Navbar />
-            <PrimaryNavbar />
-            <WishlistSidebar />
-            <CartSidebar />
-          </header>
-        </ReduxProvider>
         {children}
-        <Footer />
         <Toaster position="top-right" />
       </body>
     </html>
