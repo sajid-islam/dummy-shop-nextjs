@@ -1,3 +1,4 @@
+"use client";
 import { toast } from "sonner";
 import { Button } from "../ui/button";
 import { FiShoppingCart } from "react-icons/fi";
