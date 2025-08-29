@@ -7,7 +7,10 @@ export const productApi = createApi({
     getProducts: build.query({
       query: ({ limit = 8, skip = 0 }) => `?limit=${limit}&skip=${skip}`,
     }),
+    getSearchedProducts: build.query({
+      query: ({ text }) => `/search?q=${text}`,
+    }),
   }),
 });
 
-export const { useGetProductsQuery } = productApi;
+export const { useGetProductsQuery, useGetSearchedProductsQuery } = productApi;
