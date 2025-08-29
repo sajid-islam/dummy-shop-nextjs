@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,8 +9,12 @@ import { Badge } from "../ui/badge";
 import { CiMenuBurger } from "react-icons/ci";
 import { PiUserCircleThin } from "react-icons/pi";
 import SearchBar from "../SearchBar/SearchBar";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsOpen } from "@/redux/navbar/navbarSlice";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+
   return (
     <nav className="flex gap-10 justify-between items-center px-2 md:px-5 h-16">
       {/* Logo */}
@@ -54,7 +59,7 @@ const Navbar = () => {
         </Link>
 
         {/* Navbar toggle */}
-        <button className="md:hidden">
+        <button onClick={() => dispatch(setIsOpen())} className="hover:cursor-pointer md:hidden">
           <CiMenuBurger size={20} />
         </button>
       </div>
