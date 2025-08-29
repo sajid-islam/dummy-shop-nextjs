@@ -11,6 +11,7 @@ import { PiUserCircleThin } from "react-icons/pi";
 import SearchBar from "../SearchBar/SearchBar";
 import { useDispatch, useSelector } from "react-redux";
 import { setIsOpen } from "@/redux/navbar/navbarSlice";
+import { setIsWishlistOpen } from "@/redux/wishlist-sidebar/wishlistSlice";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -31,8 +32,8 @@ const Navbar = () => {
       {/* Actions */}
       <div className="flex items-center gap-2">
         {/* Quick Accesses */}
-        <Link
-          href="/wishlist"
+        <button
+          onClick={() => dispatch(setIsWishlistOpen())}
           className="relative flex gap-1 items-center text-muted-600 hover:text-black transition-colors duration-150"
         >
           <CiHeart size={25} />
@@ -40,7 +41,7 @@ const Navbar = () => {
           <Badge className="absolute -left-1 -top-1 h-4 min-w-4 text-[10px] rounded-full px-1 tabular-nums">
             2
           </Badge>
-        </Link>
+        </button>
         <Link
           href="#"
           className="relative flex gap-1 items-center text-muted-600 hover:text-black transition-colors duration-150"
