@@ -21,7 +21,7 @@ const categories = [
 
 const navLinks = [
   { id: "1", name: "Home", link: "/" },
-  { id: "2", name: "Brand", link: "/brand" },
+  { id: "2", name: "Brands", link: "/brands" },
   { id: "3", name: "All Categories", link: "/categories" },
 ];
 
