@@ -22,7 +22,7 @@ export default function FilterSidebar({ selectedCategory }) {
   const { data: categories = [] } = useGetBestCategoriesListQuery();
   console.log(categories);
   return (
-    <aside className="p-4 space-y-6 bg-white">
+    <aside className="p-4 space-y-6 bg-white hidden md:block">
       {/* Title */}
       <h2 className="text-lg font-semibold">FILTER</h2>
 

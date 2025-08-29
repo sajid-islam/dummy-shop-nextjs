@@ -10,6 +10,13 @@ const CategoryPage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const formatName = (name) => {
+    return name
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  };
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -34,10 +41,16 @@ const CategoryPage = () => {
           <div className="flex gap-10">
             <FilterSidebar selectedCategory={category} />
             {/* products */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-5 flex-1">
-              {products?.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
+            <div className="flex-1 mt-4 space-y-6">
+              <div>
+                <h2 className="text-xl font-semibold">{formatName(category)}</h2>
+                <p className="text-sm text-muted-600">{products.length} Item Found</p>
+              </div>
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
+                {products?.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
