@@ -2,7 +2,7 @@
 import ProductCard from "@/components/ProductCard/ProductCard";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import Loader from "./../../../components/Loader/Loader";
+import Loader from "@/components/Loader/Loader";
 import FilterSidebar from "@/components/FilterSidebar/FilterSidebar";
 import { Button } from "@/components/ui/button";
 import { CiFilter } from "react-icons/ci";
