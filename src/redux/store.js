@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import navbarReducer from "./navbar/navbarSlice";
+import filterSidebarReducer from "./filter-sidebar/filterSidebarSlice";
 import { categoryApi } from "./category/categoryApi";
 import { productApi } from "./product/productApi";
 
 export const store = configureStore({
   reducer: {
     navbar: navbarReducer,
+    filterSidebar: filterSidebarReducer,
     [categoryApi.reducerPath]: categoryApi.reducer,
     [productApi.reducerPath]: productApi.reducer,
   },
