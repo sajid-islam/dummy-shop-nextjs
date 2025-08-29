@@ -8,7 +8,10 @@ export const categoryApi = createApi({
       query: () => "/",
       transformResponse: (response) => response.slice(0, 6),
     }),
+    getAllCategoriesList: build.query({
+      query: () => "/",
+    }),
   }),
 });
 
-export const { useGetBestCategoriesListQuery } = categoryApi;
+export const { useGetBestCategoriesListQuery, useGetAllCategoriesListQuery } = categoryApi;
