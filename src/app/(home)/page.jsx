@@ -1,5 +1,6 @@
 import BannerSlider from "@/components/BannerSlider/BannerSlider";
 import BestCategories from "@/components/BestCategories/BestCategories";
+import JustForYou from "@/components/JustForYou/JustForYou";
 import Navbar from "@/components/Navbar/Navbar";
 import PrimaryNavbar from "@/components/PrimaryNavbar/PrimaryNavbar";
 import SearchBar from "@/components/SearchBar/SearchBar";
@@ -16,6 +17,7 @@ const HomePage = () => {
         </div>
         <BannerSlider />
         <BestCategories />
+        <JustForYou />
       </div>
     </div>
   );
