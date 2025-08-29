@@ -1,9 +1,9 @@
 import React from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FiHeart, FiRepeat, FiEye, FiShoppingCart } from "react-icons/fi";
+import { FiHeart } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
+import AddToCartBtn from "../AddToCartBtn/AddToCartBtn";
 
 export default function ProductCard({ product }) {
   return (
@@ -45,13 +45,7 @@ export default function ProductCard({ product }) {
       </CardContent>
 
       <CardFooter className="px-4 pt-2 pb-4">
-        <Button
-          variant="ghost"
-          className="w-full rounded-md border border-slate-100 bg-muted-50 hover:bg-muted-100 gap-2 justify-center"
-        >
-          <FiShoppingCart />
-          <span className="md:ml-2 text-sm font-medium">Add to cart</span>
-        </Button>
+        <AddToCartBtn />
       </CardFooter>
     </Card>
   );

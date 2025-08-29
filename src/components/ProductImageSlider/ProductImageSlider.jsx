@@ -10,7 +10,7 @@ const ProductImageSlider = ({ images, title }) => {
   return (
     <div className="w-fit space-y-5">
       {/* Product image */}
-      <div className="border-2 p-2 max-w-md mx-auto cursor-zoom-in">
+      <div className="border-2 p-2 max-w-xs md:max-w-md mx-auto cursor-zoom-in">
         <InnerImageZoom
           src={selectedImage}
           zoomSrc={selectedImage}
