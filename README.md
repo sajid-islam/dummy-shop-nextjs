@@ -1,7 +1,7 @@
 # 🛍️ Next.js E-commerce App
 
 A modern and responsive **E-commerce web application** built with **Next.js, Redux Toolkit, and RTK Query**.  
-It features category browsing, product search, cart & wishlist with local storage, and smooth user experience.
+It features category browsing, product search, and smooth user experience.
 
 ---
 
@@ -9,7 +9,6 @@ It features category browsing, product search, cart & wishlist with local storag
 
 - 📂 Browse products by category
 - 🔎 Search and view product details
-- 🛒 Add to Cart with quantity management
 - ⚡ State management with Redux Toolkit & RTK Query
 - 🌐 API integration with [DummyJSON](https://dummyjson.com/)
 - 📱 Fully responsive design
@@ -20,7 +19,7 @@ It features category browsing, product search, cart & wishlist with local storag
 
 - **Frontend:** Next.js, React, Tailwind CSS
 - **State Management:** Redux Toolkit, RTK Query
-- **Icons & UI:** shadcn/ui, lucide-react
+- **Icons & UI:** shadcn/ui, react-Icons
 - **Data:** DummyJSON API
 
 ---
